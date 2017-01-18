@@ -1,14 +1,16 @@
 {
   "name": "starwars-names-plastikaweb",
-  "version": "1.4.0-beta.0",
+  "version": "0.0.0-semantically-released",
   "description": "Get random Star Wars names",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/plastikaweb/starwars-names.git"
+    "url": "https://github.com/plastikaweb/starwars-names-plastikaweb.git"
   },
   "keywords": [
     "random",
@@ -18,10 +20,20 @@
   "author": "Carlos Matheu Armengol <info@plastikaweb.com> (http://www.plastikaweb.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/plastikaweb/starwars-names/issues"
+    "url": "https://github.com/plastikaweb/starwars-names-plastikaweb/issues"
   },
-  "homepage": "https://github.com/plastikaweb/starwars-names#readme",
+  "homepage": "https://github.com/plastikaweb/starwars-names-plastikaweb#readme",
   "dependencies": {
     "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "commitizen": "2.9.5",
+    "cz-conventional-changelog": "1.2.0",
+    "mocha": "3.2.0",
+    "semantic-release": "^6.3.2"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
