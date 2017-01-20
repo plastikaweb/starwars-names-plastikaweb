@@ -27,8 +27,8 @@ describe('starwars-names-plastikaweb', function () {
         });
 
         it('should return an array of random items if passed a number', function () {
-            var randomItems = starWars.random(3);
-            expect(randomItems).to.have.length(3);
+            var randomItems = starWars.random(4);
+            expect(randomItems).to.have.length(4);
             randomItems.forEach(function (item) {
                 expect(starWars.all).to.include(item);
             });
