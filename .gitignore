@@ -48,3 +48,5 @@ fabric.properties
 /node_modules/
 /*.log
 /coverage/
+/dist/
+/.nyc_output/
